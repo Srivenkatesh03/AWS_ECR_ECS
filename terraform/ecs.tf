@@ -13,10 +13,12 @@ resource "aws_lb" "app" {
 }
 
 resource "aws_lb_target_group" "tg" {
-  name     = "${var.project}-tg"
-  port     = var.container_port
-  protocol = "HTTP"
-  vpc_id   = aws_vpc.this.id
+  name        = "${var.project}-tg"
+  port        = var.container_port
+  protocol    = "HTTP"
+  vpc_id      = aws_vpc.this.id
+  target_type = "ip" 
+
   health_check {
     path                = "/"
     matcher             = "200-399"
