@@ -83,6 +83,15 @@ pipeline {
             }
         }
 
+        stage('Debug AWS Credentials') {
+            steps {
+                withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-creds']]) {
+                    sh 'aws sts get-caller-identity'
+                }
+            }
+        }
+
+
         stage('Terraform Apply (deploy)') {
             steps {
                 dir('terraform') {
