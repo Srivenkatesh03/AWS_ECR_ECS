@@ -3,10 +3,10 @@ pipeline {
   agent any
 
   environment {
-    AWS_DEFAULT_REGION = 'ap-south-1'                    // change if needed
-    ECR_REPO          = "${env.AWS_ACCOUNT_ID}.dkr.ecr.${env.AWS_DEFAULT_REGION}.amazonaws.com/${PROJECT_NAME}"
-    PROJECT_NAME      = "svc-demo"
-  }
+    AWS_DEFAULT_REGION = 'ap-south-1'
+    AWS_ACCOUNT_ID = '435929993795'
+    PROJECT_NAME = "svc-demo"
+ }
 
   parameters {
     string(name: 'IMAGE_TAG', defaultValue: '', description: 'Optional: image tag (if empty uses GIT_COMMIT)')
