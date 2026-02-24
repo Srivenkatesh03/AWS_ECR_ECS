@@ -1,6 +1,5 @@
 # AWS ECS Fargate CI/CD with Jenkins, Terraform & Docker
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## Description
 
