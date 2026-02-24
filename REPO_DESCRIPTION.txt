@@ -1,0 +1,1 @@
+End-to-end CI/CD pipeline for deploying a Python Flask microservice to AWS ECS Fargate using Jenkins, Terraform, and Docker. Includes complete infrastructure-as-code for VPC, ECS cluster, ALB, and ECR.
