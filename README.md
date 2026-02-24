@@ -153,7 +153,3 @@ terraform destroy
 2. Create a feature branch: `git checkout -b feature/my-change`.
 3. Commit your changes with clear messages.
 4. Open a pull request against `main`.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
