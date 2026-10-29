@@ -1,0 +1,34 @@
+# Local directory for data, plugins, and modules
+.terraform/
+
+# Do not commit monitoring/troubleshooting logs
+*.log
+crash.log
+
+# Local override files (used for testing quick changes locally)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# --- CRITICAL SECURITY WARNINGS ---
+
+# Local variable files containing secrets or environment-specific values
+*.tfvars
+*.tfvars.json
+*.auto.tfvars
+
+# Local CLI configurations (may contain API tokens)
+.terraformrc
+terraform.rc
+
+# --- TERRAFORM STATE FILES ---
+# If you use a remote backend (S3, GCS, Azure Blob, Terraform Cloud), 
+# local state files are temporary artifacts and must never be committed.
+*.tfstate
+*.tfstate.backup
+*.tfstate.lock.info
+
+# --- TERRAFORM PLAN OUTPUTS ---
+# Saved plan files can contain confidential infrastructure details
+*tfplan*
